@@ -1,0 +1,16 @@
+[
+{
+  "modid": "animalcage",
+  "name": "Animal Cage",
+  "description": "Basically a standalone mod version of the Animal Net from the Hatchery mod.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["DaFluid"],
+  "credits": "The Forge and FML guys, for making the framework. The guys from the Hatchery mod, for the inspiration. DaFluid for the rest.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
