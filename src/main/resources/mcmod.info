@@ -9,7 +9,7 @@
   "updateUrl": "",
   "authorList": ["DaFluid"],
   "credits": "The Forge and FML guys, for making the framework. The guys from the Hatchery mod, for the inspiration. DaFluid for the rest.",
-  "logoFile": "",
+  "logoFile": "assets/animalcage/textures/item/animal_cage.png",
   "screenshots": [],
   "dependencies": []
 }
