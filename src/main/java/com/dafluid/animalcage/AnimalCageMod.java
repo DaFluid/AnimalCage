@@ -9,7 +9,6 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
-
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.registries.IForgeRegistry;
 import org.apache.logging.log4j.LogManager;
@@ -19,7 +18,7 @@ import org.apache.logging.log4j.Logger;
 @Mod.EventBusSubscriber
 public class AnimalCageMod
 {
-    public static final String MODID = "AnimalCageMod";
+    public static final String MODID = "animalcage";
     public static final String NAME = "Animal Cage";
     public static final String VERSION = "@VERSION@";
 
@@ -54,4 +53,6 @@ public class AnimalCageMod
         itemRegistry.register(animalCage);
         AnimalCageMod.LOGGER.info("Registering items done.");
     }
+
+
 }
