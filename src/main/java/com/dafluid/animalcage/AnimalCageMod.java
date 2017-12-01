@@ -2,6 +2,8 @@ package com.dafluid.animalcage;
 
 import com.dafluid.animalcage.environment.IModEnvironment;
 import com.dafluid.animalcage.item.AnimalCage;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -11,7 +13,10 @@ import net.minecraft.item.ItemBlockSpecial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -38,7 +43,7 @@ public class AnimalCageMod
 
     private static Item initializeItemInstance(Item item, String name){
         return item.setUnlocalizedName(name)
-                .setRegistryName(AnimalCageMod.MODID,name)
+                .setRegistryName(name)
                 .setCreativeTab(CreativeTabs.MISC);
     }
 
@@ -60,8 +65,11 @@ public class AnimalCageMod
         AnimalCageMod.LOGGER.info("Registering items...");
         IForgeRegistry<Item> itemRegistry = event.getRegistry();
         itemRegistry.register(animalCage);
+        ModelLoader.setCustomModelResourceLocation(AnimalCageMod.animalCage, 0, new ModelResourceLocation(MODID + ":" + animalCage.getUnlocalizedName().substring(5)));
         AnimalCageMod.LOGGER.info("Registering items done.");
     }
+
+
 
     @SubscribeEvent
     public static void registerRecipes(RegistryEvent.Register<IRecipe> event) {
