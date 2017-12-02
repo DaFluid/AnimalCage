@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "animalcage:animal_cage" },
+    "facing=south": { "model": "animalcage:animal_cage", "y": 180 },
+    "facing=west":  { "model": "animalcage:animal_cage", "y": 270 },
+    "facing=east":  { "model": "animalcage:animal_cage", "y": 90 }
+  }
+}
